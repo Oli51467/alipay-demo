@@ -1,4 +1,4 @@
-package com.paybackend.entity;
+package com.sdu.paybackend.entity;
 
 import com.alipay.api.AlipayClient;
 import com.alipay.api.DefaultAlipayClient;

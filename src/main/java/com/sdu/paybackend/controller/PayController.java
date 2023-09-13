@@ -1,4 +1,4 @@
-package com.paybackend.controller;
+package com.sdu.paybackend.controller;
 
 import com.alipay.api.AlipayApiException;
 import com.alipay.api.AlipayClient;
@@ -6,9 +6,9 @@ import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.alipay.api.request.AlipayTradeRefundRequest;
 import com.alipay.api.response.AlipayTradeRefundResponse;
-import com.paybackend.entity.AliPay;
-import com.paybackend.entity.AlipayProperties;
-import com.paybackend.entity.RefundVo;
+import com.sdu.paybackend.entity.AliPay;
+import com.sdu.paybackend.entity.AlipayProperties;
+import com.sdu.paybackend.entity.RefundVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;

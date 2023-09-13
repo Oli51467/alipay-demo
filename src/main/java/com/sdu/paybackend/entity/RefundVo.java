@@ -1,4 +1,4 @@
-package com.paybackend.entity;
+package com.sdu.paybackend.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

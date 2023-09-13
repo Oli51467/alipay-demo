@@ -1,4 +1,4 @@
-package com.paybackend;
+package com.sdu.paybackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
