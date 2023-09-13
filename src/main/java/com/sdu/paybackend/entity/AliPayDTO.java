@@ -3,7 +3,7 @@ package com.sdu.paybackend.entity;
 import lombok.Data;
 
 @Data
-public class AliPay {
+public class AliPayDTO {
 
     // 订单编号
     private String traceNo;

@@ -6,7 +6,7 @@ import com.alipay.api.internal.util.AlipaySignature;
 import com.alipay.api.request.AlipayTradePagePayRequest;
 import com.alipay.api.request.AlipayTradeRefundRequest;
 import com.alipay.api.response.AlipayTradeRefundResponse;
-import com.sdu.paybackend.entity.AliPay;
+import com.sdu.paybackend.entity.AliPayDTO;
 import com.sdu.paybackend.entity.AlipayProperties;
 import com.sdu.paybackend.entity.RefundVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class PayController {
 
     @RequestMapping(value = "/pay", method = RequestMethod.GET)
     // http://localhost:9090/alipay/pay?subject=支付&totalAmount=1000
-    public String pay(AliPay aliPay) throws AlipayApiException {
+    public String pay(AliPayDTO aliPayDTO) throws AlipayApiException {
         // 随机一个订单id
         Random random = new Random();
         int tradeNo = random.nextInt(1000000);
@@ -54,9 +54,9 @@ public class PayController {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String expireTime = plusOneMinute.format(formatter);
         alipayRequest.setBizContent("{\"out_trade_no\":\"" + tradeNo + "\","
-                + "\"total_amount\":\"" + aliPay.getTotalAmount() + "\","
-                + "\"subject\":\"" + aliPay.getSubject() + "\","
-                + "\"body\":\"" + aliPay.getBody() + "\","
+                + "\"total_amount\":\"" + aliPayDTO.getTotalAmount() + "\","
+                + "\"subject\":\"" + aliPayDTO.getSubject() + "\","
+                + "\"body\":\"" + aliPayDTO.getBody() + "\","
                 + "\"product_code\":\"FAST_INSTANT_TRADE_PAY\","
                 + "\"timeout_express\":\"1m\","                 // 设置订单过期时间为1分钟
                 + "\"time_expire\":\"" + expireTime + "\"}");   // 设置订单过期时间

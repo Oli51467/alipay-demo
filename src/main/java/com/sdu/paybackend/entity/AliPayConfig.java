@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AliPayConfig {
+
     @Bean
     public AlipayClient alipayClient(AlipayProperties alipayProperties) {
         return new DefaultAlipayClient(alipayProperties.getGatewayUrl(),
@@ -17,5 +18,4 @@ public class AliPayConfig {
                 alipayProperties.getAlipayPublicKey(),
                 alipayProperties.getSignType());
     }
-
 }
