@@ -1,0 +1,12 @@
+alipay:
+  app_id: xxx
+  app_private_key: xxx
+  alipay_public_key: xxx
+  sign_type: RSA2
+  charset: utf-8
+  gatewayUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+  returnUrl: http://xxx.natappfree.cc/alipay/returnUrl    # 需要在https://natapp.cn/做内网穿透后设置，将xxx替换为自己的
+  notifyUrl: http://xxx.natappfree.cc/alipay/notifyUrl    # 需要在https://natapp.cn/做内网穿透后设置，将xxx替换为自己的
+
+server:
+  port: 9090
